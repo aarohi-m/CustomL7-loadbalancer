@@ -15,8 +15,7 @@ func main() {
 	for _, s := range serverList {
 		u, _ := url.Parse(s)
 
-
-		pool.AddBackend(NewBackend(u)
+		pool.AddBackend(NewBackend(u))
 	}
 
 	// Start Health Check in background
