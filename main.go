@@ -15,7 +15,6 @@ func main() {
 	for _, s := range serverList {
 		u, _ := url.Parse(s)
 
-		alpha
 		pool.AddBackend(NewBackend(u))
 	}
 
