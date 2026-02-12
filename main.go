@@ -14,11 +14,7 @@ func main() {
 
 	for _, s := range serverList {
 		u, _ := url.Parse(s)
- 
 
-
-
-		aarohi
 		pool.AddBackend(NewBackend(u))
 	}
 
