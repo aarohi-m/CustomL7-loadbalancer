@@ -9,7 +9,7 @@ import (
 
 func main() {
 	// List of backend servers
-	serverList := []string{"http://127.0.0.1:8081", "http://127.0.0.1:8082"}
+	serverList := []string{":8081", ":8082"}
 	pool := &ServerPool{}
 
 	for _, s := range serverList {
@@ -27,7 +27,7 @@ func main() {
 	}()
 
 	server := http.Server{
-		Addr:    "127.0.0.1:8080",
+		Addr:    ":8080",
 		Handler: http.HandlerFunc(lbHandler(pool)),
 	}
 
